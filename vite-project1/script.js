@@ -1,4 +1,4 @@
-// import { supabase } from '/supabaseClient.mjs';
+import { supabase } from 'vite-project1/supabaseClient.mjs';
 
 let selectedPostIt = null;
 

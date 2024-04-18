@@ -1,5 +1,5 @@
 // supabaseClient.mjs
-import { createClient } from 'vite-project1/@supabase/supabase-js';
+import { createClient } from 'vite-project1/@supabase/supabase-js/dist/main/lib';
 
 const supabaseUrl = 'https://aompyldrxifdsiyswjtx.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvbXB5bGRyeGlmZHNpeXN3anR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTMzNTAwMTIsImV4cCI6MjAyODkyNjAxMn0.-ejgvBgVWsCvGxD76CSYPS03fwPZIpiJvw7wrJMTiAY';

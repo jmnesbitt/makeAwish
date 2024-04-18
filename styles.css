@@ -1,0 +1,20 @@
+.post-it {
+    position: absolute;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    max-width: 600px; /* Limit maximum width */
+    overflow-wrap: break-word; /* Allow words to break */
+}
+
+.post-it p {
+    margin: 0;
+}
+
+.post-it:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
+}

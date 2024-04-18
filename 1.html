@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Board</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="/script.js" ></script>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="wish-container">
+        <textarea id="wish-input" placeholder="Type your wish here"></textarea>
+        <button onclick="makeWish()">Make Wish</button>
+        <button onclick="resetWishes()">Reset Wishes</button>
+        <!-- Added reset button -->
+    </div>
+    <div id="post-it"></div>
+
+ <!-- Home button -->
+ <a href="/index.html" class="home-button">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>the-ogham</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/ogham_favicon.svg">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      text-align: center;
+      background-color: #f0f0f0; /* Background color */
+      color: #333; /* Text color */
+      overflow: hidden; /* Hide any scroll bars */
+    }
+    .ligature-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2em; /* Adjust the gap between ligatures */
+    }
+    .ligature {
+      font-family: Arial, sans-serif; /* You might need to adjust the font-family depending on the font support */
+      width: 30px; /* Adjust ligature width as needed */
+      height: 30px; /* Adjust ligature height as needed */
+    }
+    .link-circle {
+      position: fixed;
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+    }
+    .link-circle:nth-of-type(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-200px, -50%);
+    }
+    .link-circle:nth-of-type(2) {
+      top: 50%;
+      left: 50%;
+      transform: translate(200px, -50%);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Ligature Container -->
+  <div class="ligature-container" id="ligatureContainer"></div>
+
+  <!-- Link to another page -->
+  <a href="/1.html" class="link-circle">1</a>
+
+    <!-- Link to another page -->
+    <a href="/2.html" class="link-circle">2</a>
+
+   <!-- Home button -->
+   <a href="/index.html" class="home-button">Home</a>
+
+  <!-- Script to generate ligatures -->
+  <script>
+    const ligatures = '&#5792;&#5793;&#5794;&#5795;&#5796;&#5797;&#5798;&#5799;&#5800;&#5801;&#5802;&#5803;&#5804;&#5805;&#5806;&#5807;&#5808;&#5809;&#5810;&#5811;&#5812;&#5813;&#5814;&#5815;&#5816;&#5817;&#5818;&#5819;&#5820;&#5821;&#5822;';
+    const ligatureContainer = document.getElementById('ligatureContainer');
+    const ligatureWidth = 30; // Width of each ligature (adjust as needed)
+    const ligatureHeight = 30; // Height of each ligature (adjust as needed)
+    const numColumns = Math.ceil(window.innerWidth / ligatureWidth); // Calculate number of columns based on ligature width
+    const numRows = Math.ceil(window.innerHeight / ligatureHeight); // Calculate number of rows based on ligature height
+
+    // Generate ligatures and append them to the ligature container
+    for (let i = 0; i < numColumns * numRows; i++) {
+      const ligature = document.createElement('div');
+      ligature.className = 'ligature';
+      ligature.innerHTML = ligatures;
+      ligatureContainer.appendChild(ligature);
+    }
+  </script>
+</body>
+</html>
